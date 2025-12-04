@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smile Centre</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #4a86e8;
+      color: white;
+      padding: 2rem 4rem;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      gap: 3rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: #4a86e8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 80px;
+    }
+
+    .hero img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Section Container */
+    .section {
+      padding: 6rem 4rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* White Sections */
+    .bg-white {
+      background-color: white;
+    }
+
+    /* Blue Sections */
+    .bg-blue {
+      background-color: #4a86e8;
+      color: white;
+    }
+
+    /* Dark Section */
+    .bg-dark {
+      background-color: #2F4F4F;
+      color: white;
+    }
+
+    /* Split Layout (Text + Image) */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .split img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .big-text {
+      font-size: 28px;
+      line-height: 1.4;
+      color: #4a86e8;
+      margin-bottom: 2rem;
+    }
+
+    .big-text em {
+      font-style: italic;
+    }
+
+    /* Cards Grid */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    .card-btn {
+      display: block;
+      background-color: white;
+      color: #4a86e8;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 8px;
+      font-size: 18px;
+      margin: 0 auto;
+      max-width: 250px;
+    }
+
+    /* Contribute Cards */
+    .contribute-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .contribute-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contribute-card {
+      padding: 3rem;
+      border-radius: 30px;
+      color: white;
+    }
+
+    .card-red {
+      background-color: #e06666;
+    }
+
+    .card-pink {
+      background-color: #e0459e;
+    }
+
+    .contribute-card h3 {
+      font-size: 24px;
+      margin-bottom: 1.5rem;
+    }
+
+    .contribute-card p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* Footer Info Bar */
+    .footer-info {
+      background-color: #4a86e8;
+      color: white;
+      padding: 3rem 4rem;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .footer-info a {
+      color: #ffff00;
+      text-decoration: underline;
+    }
+
+    /* Main Footer */
+    .main-footer {
+      background-color: #2F4F4F;
+      color: white;
+      padding: 4rem;
+      text-align: center;
+    }
+
+    .footer-tagline {
+      font-size: 24px;
+      margin-bottom: 3rem;
+    }
+
+    .sinhala-logo {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#mission">Our Mission</a></li>
+      <li><a href="#activities">What We Do</a></li>
+      <li><a href="#follow">Follow Us</a></li>
+      <li><a href="#contribute">Contribute</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="IMG_8693-removebg-preview.png" alt="Smile Centre Logo">
+  </section>
+
+  <!-- Section 1: Mission (Text Left, Image Right) -->
+  <section class="section bg-white" id="mission">
+    <div class="container">
+      <div class="split">
+        <div>
+          <p class="big-text">We whole-heartedly believe that <em>different doesn't mean disadvantaged.</em></p>
+          <p class="big-text">So our mission is to champion <em>abilities within disabilities</em> to raise smiles and expectations.</p>
+        </div>
+        <div>
+          <img src="one_girl.jpeg" alt="Student smiling">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Activities (Image Left, Text Right) -->
+  <section class="section bg-white" id="activities">
+    <div class="container">
+      <div class="split">
+        <div>
+          <img src="one_boy.jpeg" alt="Student standing">
+        </div>
+        <div>
+          <p class="big-text">We do this through educational and vocational learning.</p>
+          <p class="big-text">That's dancing, gardening, sports, sewing, music, maths, English, and so much more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Follow Us (Blue Background) -->
+  <section class="section bg-blue" id="follow">
+    <div class="container">
+      <h2>Follow along with us on Facebook to see what we're up to.</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="two_girls.jpeg" alt="Smile Centre Students">
+          <a href="#" class="card-btn">SMILE CENTRE</a>
+        </div>
+        <div class="card">
+          <img src="sewing_boy.jpeg" alt="Smile Crafts">
+          <a href="#" class="card-btn">SMILE CRAFTS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Contribute (Dark Background) -->
+  <section class="section bg-dark" id="contribute">
+    <div class="container">
+      <h2>Contribute what you can!</h2>
+      <div class="contribute-cards">
+        <div class="contribute-card card-red">
+          <h3>Spare some time?</h3>
+          <p>Volunteer with us! We're always open to ideas on how people can join us. Drop us an email and we can figure out how together.</p>
+        </div>
+        <div class="contribute-card card-pink">
+          <h3>Donate some change</h3>
+          <p>We really appreciate anything you can spare. As a non-profit, all proceeds go into keeping our community here thriving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Info Bar -->
+  <section class="footer-info">
+    <p>Find us online at <a href="mailto:smileeducationcentre@gmail.com">smileeducationcentre@gmail.com</a></p>
+    <p>Or in person at <a href="#">this address</a></p>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <p class="footer-tagline">Whatever you do, just don't forget to give someone a smile</p>
+    <div class="sinhala-logo">
+      <img src="foundation_logo.jpeg" alt="Foundation Logo" style="width: 100%; height: auto;">
+    </div>
+  </footer>
+
+</body>
+</html>
+
